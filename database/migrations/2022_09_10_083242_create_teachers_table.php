@@ -17,9 +17,9 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->string('surname');
-            $table->string('forename');
+            $table->string('firstname');
             $table->string('middlenames');
-            $table->bigInteger('pronouns');
+            $table->string('gender');
             $table->timestamps();
         });
     }

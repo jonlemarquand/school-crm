@@ -16,9 +16,10 @@ return new class extends Migration
         Schema::create('students', function (Blueprint $table) {
             $table->id();
             $table->string('surname');
-            $table->string('forename');
+            $table->string('firstname');
             $table->string('middlenames');
-            $table->bigInteger('pronouns');
+            $table->string('gender');
+            $table->date('date_of_birth');
             $table->bigInteger('form');
             $table->timestamps();
         });

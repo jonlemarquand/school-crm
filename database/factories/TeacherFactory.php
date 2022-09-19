@@ -16,8 +16,16 @@ class TeacherFactory extends Factory
      */
     public function definition()
     {
+        $gender = rand(0,1);
+        $gender = $gender == 1 ? 'male' : 'female';
+        $gender_letter = $gender == 'male' ? 'm' : 'f';
+
         return [
-            //
+            'title' => fake()->title($gender),
+            'surname' => fake()->lastName(),
+            'firstname' => fake()->firstName($gender),
+            'middlenames' => fake()->firstName($gender) . ' ' . fake()->firstName($gender),
+            'gender' => $gender_letter,
         ];
     }
 }
